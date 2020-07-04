@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="txtNum"><br/>
+<button type="button" onclick="tables()">table</button>
+<p id="ptable"></p>
+</body>
+<script>
+	function tables(){
+		var num;
+
+	 num=Number(document.getElementById("txtNum").value);
+	
+	
+		for(var i=1;i<11;i++){
+			var pTab=document.getElementById('ptable');
+		pTab.innerHTML ; 		
+		console.log(num+"*"+i+"="+(num*i));
+	}
+}
+
+
+		
+
+
+</script>
+</html>

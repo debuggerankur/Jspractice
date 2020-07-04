@@ -1,0 +1,55 @@
+<!DOCTYPE html>                                                                                                                                                                   
+<html>
+<head>
+<title>page Title</title>
+<style type="text/css">
+
+#textmsg1{
+	border-width: 1px;
+	border-style: solid;
+}
+div{
+width: 50%;
+}
+	</style>
+
+
+
+</head>
+<script>
+	  var x =10;
+
+	    function addtext() {
+        
+  
+   
+var ele = document.createElement("div");
+      ele.innerHTML= x  ;
+ x=x-1;
+document.body.appendChild(ele);
+}
+
+
+var x=10;
+	function addtxt(){
+var ele=document.createElement("div");
+ele.innerHTML=x;
+x=x+1;
+document.body.appendChild(ele);
+
+	}
+
+	 
+
+</script>
+
+<body>
+	<h>Sales of pepsi:<h><br/>
+<button style="background-color: #0000FF" onclick="addtext()">sell 1 pepsi</button><br/><br/>
+	<h>Sales of cocacola:<h><br/>
+<button style="background-color: #DD0000" onclick="addtxt()">sell 1 cocacola</button>
+<br/>
+</div>
+</div>
+</body>
+</html>

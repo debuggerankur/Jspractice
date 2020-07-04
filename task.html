@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="ashish.css">
+	<title>
+		
+	</title>
+</head>
+<body>
+  Name: <input  type="text" id="name1"><br/>
+ Age: <input  type="text" id="age1"><br/>
+ City: <input  type="text" id="city1"><br/>
+ Technology: <input  type="text" id="tech1"><br/>
+
+<button id="btn1" onclick="add()">Add person</button>
+<div id="products"></div>
+</body>
+<script>
+	let prod1={"name":"ankur","age":20,"city":"jaipur","technology":"java"}
+	
+	let products=[prod1];
+	showProducts();
+	function add(){
+		let name1=document.getElementById("name1");
+		let age1=document.getElementById("age1");
+		let tech1=document.getElementById("tech1");
+		let city1=document.getElementById("city1");
+
+		let prod={"name":name1.value,"age":age1.value,"city":city1.value,"technology":tech1.value};
+		if (getIndex(name1.value)<0) {
+			products.push(prod);
+		showProducts();
+			}
+
+else{
+	alert("Product already exists");
+}
+name1.value="";
+age1.value="";
+city1.value="";
+tech1.value="";
+}
+
+function getIndex(name1){
+	let len=products.length;
+	let index= -1;
+	for(let i=0;i<len;i++){
+		if (products[i].name===name1) 
+			index=i;
+	}
+	return index;
+}
+function remove(index){
+console.log("Remove index=",index);
+products.splice(index,1);
+showProducts();
+	}
+	function edit(index){
+		console.log("Edit index=",index);
+		let prod=products[index];
+		let name1=document.getElementById("name1");
+		let qty1=document.getElementById("qty1");
+				let btn1=document.getElementById("btn1");
+
+		name1.value=prod.name;
+		qty1.value=prod.quantity;
+		btn1.setAttribute("onclick","editProduct("+index+")");
+		btn1.innerText="Update";
+	}
+function editProduct(index){
+		let name1=document.getElementById("name1");
+		let age1=document.getElementById("age1");
+		let city1=document.getElementById("city1");
+		let tech1=document.getElementById("tech1");
+		let prod={"name":name1.value,"age":age1.value,"city":city1.value,"technology":tech1.value};
+		name1.value="";
+        age1.value="";
+        city1.value="";
+        tech1.value="";
+		products[index]=prod;
+		let btn1=document.getElementById("btn1");
+		btn1.innerText="Add";
+		btn1.setAttribute("onclick","add()");
+		showProducts();
+	}
+function showProducts(){
+		let len=products.length;
+		let str="";
+		for(let i=0;i<len;i++){
+let pr=products[i];
+let name1="<div class='cell22'>"+pr.name+"</div>";
+let age1="<div class='cell11'>"+pr.age+"</div>";
+let city1="<div class='cell22'>"+pr.city+"</div>";
+let tech1="<div class='cell22'>"+pr.technology+"</div>";
+
+
+let btn1="<div class='cell11'><button onclick=remove("+i+")>Remove</button></div>";
+let btn2="<div class='cell11'><button onclick=edit("+i+")>Edit</button></div>";
+
+let row="<div>"+name1+age1+city1+tech1+btn1+btn2+"</div>";
+str=str+row;
+
+
+		}
+		let table=document.getElementById("products");
+		table.innerHTML=str;
+	}
+
+</script>
+
+</html>

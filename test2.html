@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="maths" placeholder="Maths">
+		<input type="text" id="english" placeholder="English">
+	<input type="text" id="science" placeholder="Science"><br/>
+
+	<button onclick="func()">marks</button>
+<p id="ptable"></p>
+<p id="ptable1"></p>
+<p id="ptable2"></p>
+
+
+</body>
+<script>
+	function func(){
+var a=maths.value;
+var b=english.value;
+var c=science.value;
+var d=+a;
+var e=+b;
+var f=+c;
+if (a>=80) {
+	var Grade="A";
+}
+else if(a>=60 && a<80){
+	var Grade="B";
+}
+else if(b<60){
+	var Grade="C";
+}
+if(b>=80){
+	var Grade1="A";
+
+}
+else if(b>=60 && b<80){
+	var Grade1="B";
+}
+else if(b<60){
+	var Grade1="C";
+}
+if(c>=80){
+	var Grade2="A";
+}
+else if(c>=60 && c<80){
+	var Grade2="B";
+
+}
+else if(c<60){
+	var Grade2="C";
+}
+if(d>e && d>f){
+	var high="Maths";
+}
+else if (e>d&& d>f) {
+	var high="English";
+}
+else{
+	var high="Science";
+}
+console.log("Maths :",a,"Grade :",Grade);
+console.log("English :",b,"Grade :",Grade1);
+console.log("Science :",c,"Grade :",Grade2);
+console.log("Total marks :",d+e+f);
+console.log("Highest score :",high);
+
+}
+	
+
+
+
+</script>
+</html>

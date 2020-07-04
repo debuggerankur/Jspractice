@@ -1,0 +1,54 @@
+<!DOCTYPE html>                                                                                                                                                                   
+<html>
+<head>
+<title>page Title</title>
+<style type="text/css">
+
+#textmsg1{
+	border-width: 1px;
+	border-style: solid;
+}
+div{
+width: 50%;
+}
+	</style>
+
+
+
+</head>
+<body>
+<button class="button" onclick="add()">Add 1 to x</button><br/>
+<br/>
+<div  id="out"></div>
+
+</body>
+<script>
+	var a=prompt("Enter the value of x");
+	function add() {
+var b=+a;
+var c=b+1;
+	var ele=document.getElementById("out");
+	ele.innerHTML=c;
+
+
+
+	
+
+	 if(c<=5){
+		ele.style.backgroundColor="#DDDDDD";
+		ele.style.textAlign="left";
+	}
+	else if(c>5 && c<10){
+			ele.style.backgroundColor="#999999";
+		ele.style.textAlign="center";
+
+
+	}
+	else{
+	ele.style.backgroundColor="#444444";
+		ele.style.textAlign="right";
+		ele.style.color="white";
+	}
+}
+</script>
+</html>

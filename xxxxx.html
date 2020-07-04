@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+</body>
+<script>
+	function char_count(str,letter,str1){
+		var letter_Count=0;
+		for(var position=0;position<str.length;position++)
+		{
+			if(str.charAt(position)==letter){
+				letter_Count+=1;
+			}
+		}
+		return letter_Count;
+	}
+
+console.log(char_count('x+y+xy+4x=7','x'));
+console.log(char_count('x+y+xy+4x=7','y'));
+</script>
+</html>

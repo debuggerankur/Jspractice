@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="txt1"><br/>
+	<button onclick="validate()">Validate</button><br/>
+	<div id="txt1valid"></div>
+
+
+</body>
+<script>
+	function validate(){
+var inpField=document.getElementById("txt1");
+var inpValue=inpField.value;
+
+var lower="";
+var upper="";
+var len=inpValue.length;
+var ele=document.getElementById("txt1valid");
+for(var i=0;i<len;i++){
+	var ch=inpValue.charAt(i);
+if(ch>='a'&& ch<='z') {
+	lower=lower+ch;
+	}
+if(ch>='A' && ch<='Z'){
+upper=upper+ch;
+	}
+}
+console.log("invalid");
+}
+</script>
+</html>

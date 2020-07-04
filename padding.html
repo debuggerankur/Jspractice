@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head >
+		<title></title>
+	<style type="text/css">
+		.text1{
+				padding: 20px;
+			margin: 20px;
+			border: 5px solid pink;
+			background-color: gray;
+		text-align: center;
+		}
+.button{
+	border:1px lightblue;
+}
+</style>
+</head>
+<body>
+	<button class="button" onclick="style1()">Style1</button>
+<button class="button" onclick="style2()">Style2</button>
+			<button class="button" onclick="style3()">Style3</button>
+	<br/>
+	<div class="text1" id="textmsg"></div>
+</div>
+</body>
+<script>
+		  function style1()  {
+	var ele=document.getElementById('textmsg');
+	ele.innerHTML ="STYLE1:padding:20,margin:20,border:5";
+}
+function style2() {
+	var ele=document.getElementById('textmsg');
+	ele.innerHTML="STYLE2:padding:10,margin:40,border:10";
+}
+function style3() {
+	var ele=document.getElementById('textmsg');
+	ele.innerHTML="STYLE3:padding:40,margin:10,border:20";
+}
+</script>
+</html>

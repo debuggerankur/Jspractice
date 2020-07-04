@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="ashish.css">
+	<title></title>
+</head>
+<body>
+<div class="div1">
+	<div style="background-color: black" class="cell40">Product</div>
+<div style="background-color: black"  class="cell40">code</div>
+<div style="background-color: black"  class="cell15">price</div>
+<div style="background-color: black"  class="cell15">quantity</div>
+</div>
+</body>
+<script>
+
+	var products=["pepsi","coke","5star","maggi","gems"];
+	var productcode=["P"+235,"C"+159,"S"+341,"M0"+55,"G"+732];
+	var price=[15,18,12,10,8];
+	var quantity=[30,27,10,40,12];
+
+	var len=products.length;
+	var str="";
+	for( var i=0;i<len;i++){
+
+		var products1="<div class='cell40'>"+products[i]+"</div>";
+	var code1="<div class='cell40' >"+productcode[i]+"</div>";
+	var price1="<div class='cell15'>"+price[i]+"</div>";
+	var quantity1="<div class='cell15'>"+quantity[i]+"</div>";
+var row="<div>"+products1+code1+price1+quantity1+"</div>";
+str=str+row;
+	}
+console.log(str);
+var element=document.createElement("div");
+element.innerHTML=str;
+document.body.appendChild(element);
+</script>
+</html>

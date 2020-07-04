@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Txt1:<input type="text" id="txt1" ><br/>
+Txt2:<input type="text" id="txt2"><br/>
+<button onclick="process()">Process</button><br/>
+</body>
+<script>
+function process()
+	{
+		var inpField1 = document.getElementById("txt1");
+		var inpValue1 = inpField1.value;
+		var inpField2 = document.getElementById("txt2");
+		var upper1=inpValue1.toUpperCase();
+
+		var inpValue2 = inpField2.value;
+		if (inpValue1=="EDUFECT") {
+			console.log("Start with EDUFECT")
+		}
+		else{
+			console.log("Does not Start")
+		}
+		}
+
+
+
+</script>
+</html>

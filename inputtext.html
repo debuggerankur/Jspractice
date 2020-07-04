@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<script>
+	function calculate()
+	{
+
+		var field1=document.getElementById("num1").value;
+		var len=field1.length;
+		var field2=document.getElementById("num2").value;
+
+        var len1=field2.length;
+		var result=field1 .concat( field2);
+
+		if(len<len1){
+		 
+			document.getElementById("answer").innerHTML= "larger";
+		}
+		else{
+
+			document.getElementById("answer").innerHTML= "shorter";
+	
+		}
+console.log(result);
+}
+
+
+
+</script>
+
+	
+	<h1 id="answer"></h1>
+
+	<input type="text" id="num1">
+	<br/>
+	<br/>
+
+	<input type="text" id="num2">
+	<br/>
+	<br/>
+	<button onclick="calculate()">add</button>
+
+
+
+</body>
+
+</html>
